@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Nav = ({ location, history }) => {
-  console.log('nav location', location);
-  console.log('nav history', history);
+  // console.log('nav location', location);
+  // console.log('nav history', history);
 
 
 
@@ -17,7 +17,7 @@ const Nav = ({ location, history }) => {
           <button onClick={() => history.push('/info')}>정보</button>
         </li>
         <li>
-          <Link to="/sub">서브</Link>
+          <Link to="/todolist">서브</Link>
           
         </li>
       </ul>

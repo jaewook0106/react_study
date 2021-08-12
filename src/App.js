@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';  //Switch
 import Info from './pages/Info';
 import Main from './pages/Main';
-import Sub from './pages/Sub';
+import TodoList from './pages/todolist/TodoList';
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
       <Router>
         <Switch>
           <Route path="/info" component={Info} />
-          <Route path="/sub" component={Sub} />
+          <Route path="/todolist" component={TodoList} />
           <Route path="/" exact component={Main} />
           <Route render={() => <p>404 페이지가 없습니다.</p>} />
         </Switch>  
