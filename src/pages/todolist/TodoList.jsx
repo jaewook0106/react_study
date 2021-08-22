@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import Nav from '../../components/nav/Nav'
+import Nav from '../../components/nav/Nav';
+import List from '../../components/todolist/List';
 
 const TodoList = ({ location, history }) => {
 
@@ -36,13 +37,7 @@ const TodoList = ({ location, history }) => {
         </div>
         <ul className="list_item">
           {listData.map( (item, idx) => {
-            return(
-              <li key={item + idx}>
-                <div className="desc_item">{item}</div>
-                <button type="button" className="btn_del btn_item" onClick={() => {handleDeleteClick(item)}}>삭제</button>
-              </li>
-            )
-            
+            return <List key={item + idx} item={item} deleteClick={handleDeleteClick}/>
           })}
           
         </ul>

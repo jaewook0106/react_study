@@ -1,9 +1,10 @@
 // import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';  //Switch
 import Info from './pages/Info';
 import Main from './pages/Main';
 import TodoList from './pages/todolist/TodoList';
+import Modal from './components/modal/Modal';
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
           <Route render={() => <p>404 페이지가 없습니다.</p>} />
         </Switch>  
       </Router>
+      <Modal />
+
     </div>
   );
 }
